@@ -8,6 +8,7 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
     
     <style>
         :root {
@@ -136,15 +137,15 @@
         };
 
         const i18n = {
-            ar: { flag: <Icons.Flags.SA />, name: 'العربية', dir: 'rtl', iso: 'ar', channel: 'https://t.me/Noxflix_Arabic', home: 'الرئيسية', search: 'البحث', saved: 'المحفوظات', notice: 'في حالة ما إذا توقف البوت سيتم نشر رابط البوت الجديد عبر قناتنا', btn: 'انضم الى قناتنا', all: 'الكل', movies: 'أفلام', tv: 'مسلسلات', seeAll: 'عرض الكل', watchMovie: 'مشاهدة الفيلم', watchTV: 'مشاهدة المسلسل', seasons: 'المواسم', episodes: 'الحلقات', cast: 'الممثلين', trailer: 'الإعلان التشويقي', details: 'التفاصيل', lang: 'اللغة', season: 'موسم', episode: 'حلقة', searchPlaceholder: 'ابحث...', noSaved: 'لا يوجد عناصر.', servers: 'سيرفرات المشاهدة', descMovie: 'وصف الفيلم', descTV: 'وصف المسلسل', fullscreen: 'تكبير الشاشة', loadMore: 'تحميل المزيد' },
-            en: { flag: <Icons.Flags.US />, name: 'English', dir: 'ltr', iso: 'en', channel: 'https://t.me/Noxflix', home: 'Home', search: 'Search', saved: 'Saved', notice: 'If the bot stops, the new link will be posted on our channel', btn: 'Join our channel', all: 'All', movies: 'Movies', tv: 'TV Shows', seeAll: 'See All', watchMovie: 'Watch Movie', watchTV: 'Watch TV Show', seasons: 'Seasons', episodes: 'Episodes', cast: 'Cast', trailer: 'Trailer', details: 'Details', lang: 'Language', season: 'Season', episode: 'Episode', searchPlaceholder: 'Search...', noSaved: 'Nothing saved yet.', servers: 'Streaming Servers', descMovie: 'Movie Description', descTV: 'TV Show Description', fullscreen: 'Fullscreen', loadMore: 'Load More' },
-            hi: { flag: <Icons.Flags.IN />, name: 'हिन्दी', dir: 'ltr', iso: 'hi', channel: 'https://t.me/Noxflix_Hindi', home: 'होम', search: 'खोज', saved: 'सहेजा गया', notice: 'यदि बॉट बंद हो जाता है, तो नया लिंक हमारे चैनल पर पोस्ट किया जाएगा', btn: 'हमारे चैनल से जुड़ें', all: 'सभी', movies: 'फ़िल्में', tv: 'टीवी शो', seeAll: 'सभी देखें', watchMovie: 'मूवी देखें', watchTV: 'टीवी शो देखें', seasons: 'सीज़न', episodes: 'एपिसोड', cast: 'कास्ट', trailer: 'ट्रेलर', details: 'विवरण', lang: 'भाषा', season: 'सीज़न', episode: 'एपिसोड', searchPlaceholder: 'खोज...', noSaved: 'कुछ सहेजा नहीं गया.', servers: 'सर्वर', descMovie: 'मूवी विवरण', descTV: 'टीवी शो विवरण', fullscreen: 'पूर्ण स्क्रीन', loadMore: 'और लोड करें' },
-            ru: { flag: <Icons.Flags.RU />, name: 'Русский', dir: 'ltr', iso: 'ru', channel: 'https://t.me/Noxflix_Russian', home: 'Главная', search: 'Поиск', saved: 'Сохраненное', notice: 'Если бот остановится, новая ссылка будет опубликована на нашем канале', btn: 'Присоединяйтесь к каналу', all: 'Все', movies: 'Фильмы', tv: 'Сериалы', seeAll: 'Все', watchMovie: 'Смотреть фильм', watchTV: 'Смотреть сериал', seasons: 'Сезоны', episodes: 'Эпизоды', cast: 'В ролях', trailer: 'Трейлер', details: 'Детали', lang: 'Язык', season: 'Сезон', episode: 'Эпизод', searchPlaceholder: 'Поиск...', noSaved: 'Пусто.', servers: 'Серверы', descMovie: 'Описание фильма', descTV: 'Описание сериала', fullscreen: 'Во весь экран', loadMore: 'Загрузить еще' },
-            pt: { flag: <Icons.Flags.PT />, name: 'Português', dir: 'ltr', iso: 'pt', channel: 'https://t.me/Noxflix_Portuguese', home: 'Início', search: 'Buscar', saved: 'Salvos', notice: 'Se o bot parar, o novo link será postado em nosso canal', btn: 'Junte-se ao canal', all: 'Todos', movies: 'Filmes', tv: 'Séries', seeAll: 'Ver Todos', watchMovie: 'Assistir Filme', watchTV: 'Assistir Série', seasons: 'Temporadas', episodes: 'Episódios', cast: 'Elenco', trailer: 'Trailer', details: 'Detalhes', lang: 'Idioma', season: 'Temporada', episode: 'Episódio', searchPlaceholder: 'Buscar...', noSaved: 'Nada salvo.', servers: 'Servidores', descMovie: 'Descrição do filme', descTV: 'Descrição da série', fullscreen: 'Tela Cheia', loadMore: 'Carregar Mais' },
-            id: { flag: <Icons.Flags.ID />, name: 'Indonesia', dir: 'ltr', iso: 'id', channel: 'https://t.me/NoxflixIndonesian', home: 'Beranda', search: 'Cari', saved: 'Tersimpan', notice: 'Jika bot berhenti, tautan baru akan diposting di saluran kami', btn: 'Bergabunglah dengan saluran kami', all: 'Semua', movies: 'Film', tv: 'TV Show', seeAll: 'Lihat Semua', watchMovie: 'Nonton Film', watchTV: 'Nonton TV Show', seasons: 'Musim', episodes: 'Episode', cast: 'Pemeran', trailer: 'Trailer', details: 'Detail', lang: 'Bahasa', season: 'Musim', episode: 'Episode', searchPlaceholder: 'Cari...', noSaved: 'Belum ada.', servers: 'Server', descMovie: 'Deskripsi Film', descTV: 'Deskripsi TV Show', fullscreen: 'Layar Penuh', loadMore: 'Muat Lebih Banyak' },
-            es: { flag: <Icons.Flags.ES />, name: 'Español', dir: 'ltr', iso: 'es', channel: 'https://t.me/Noxflix_Spanish', home: 'Inicio', search: 'Buscar', saved: 'Guardados', notice: 'Si el bot se detiene, el nuevo enlace se publicará en nuestro canal', btn: 'Únete a nuestro canal', all: 'Todo', movies: 'Películas', tv: 'Series', seeAll: 'Ver Todo', watchMovie: 'Ver Película', watchTV: 'Ver Serie', seasons: 'Temporadas', episodes: 'Episodios', cast: 'Reparto', trailer: 'Tráiler', details: 'Detalles', lang: 'Idioma', season: 'Temporada', episode: 'Episodio', searchPlaceholder: 'Buscar...', noSaved: 'Nada guardado.', servers: 'Servidores', descMovie: 'Descripción de la película', descTV: 'Descripción de la serie', fullscreen: 'Pantalla Completa', loadMore: 'Cargar Más' },
-            fr: { flag: <Icons.Flags.FR />, name: 'Français', dir: 'ltr', iso: 'fr', channel: 'https://t.me/Noxflix_French', home: 'Accueil', search: 'Recherche', saved: 'Enregistré', notice: 'Si le bot s\'arrête, le nouveau lien sera publié sur notre chaîne', btn: 'Rejoignez notre chaîne', all: 'Tout', movies: 'Films', tv: 'Séries', seeAll: 'Voir Tout', watchMovie: 'Voir le film', watchTV: 'Voir la série', seasons: 'Saisons', episodes: 'Épisodes', cast: 'Casting', trailer: 'Bande-annonce', details: 'Détails', lang: 'Langue', season: 'Saison', episode: 'Épisode', searchPlaceholder: 'Rechercher...', noSaved: 'Rien d\'enregistré.', servers: 'Serveurs', descMovie: 'Description du film', descTV: 'Description de la série', fullscreen: 'Plein Écran', loadMore: 'Charger Plus' },
-            de: { flag: <Icons.Flags.DE />, name: 'Deutsch', dir: 'ltr', iso: 'de', channel: 'https://t.me/Noxflix_German', home: 'Start', search: 'Suche', saved: 'Gespeichert', notice: 'Wenn der Bot stoppt, wird der neue Link auf unserem Kanal veröffentlicht', btn: 'Tritt unserem Kanal bei', all: 'Alle', movies: 'Filme', tv: 'Serien', seeAll: 'Alle ansehen', watchMovie: 'Film ansehen', watchTV: 'Serie ansehen', seasons: 'Staffeln', episodes: 'Episoden', cast: 'Besetzung', trailer: 'Trailer', details: 'Details', lang: 'Sprache', season: 'Staffel', episode: 'Episode', searchPlaceholder: 'Suchen...', noSaved: 'Nichts gespeichert.', servers: 'Server', descMovie: 'Filmbeschreibung', descTV: 'Serienbeschreibung', fullscreen: 'Vollbild', loadMore: 'Mehr Laden' }
+            ar: { flag: <Icons.Flags.SA />, name: 'العربية', dir: 'rtl', iso: 'ar', channel: 'https://t.me/Noxflix_Arabic', home: 'الرئيسية', search: 'البحث', saved: 'المحفوظات', notice: 'في حالة ما إذا توقف البوت سيتم نشر رابط البوت الجديد عبر قناتنا', btn: 'انضم الى قناتنا', all: 'الكل', movies: 'أفلام', tv: 'مسلسلات', seeAll: 'عرض الكل', watchMovie: 'مشاهدة الفيلم', watchTV: 'مشاهدة المسلسل', seasons: 'المواسم', episodes: 'الحلقات', cast: 'الممثلين', trailer: 'الإعلان التشويقي', details: 'التفاصيل', lang: 'اللغة', season: 'موسم', episode: 'حلقة', searchPlaceholder: 'ابحث...', noSaved: 'لا يوجد عناصر.', servers: 'سيرفرات المشاهدة', descMovie: 'وصف الفيلم', descTV: 'وصف المسلسل', fullscreen: 'تكبير الشاشة', loadMore: 'تحميل المزيد', genres: { action: 'أكشن', drama: 'دراما', comedy: 'كوميديا', thriller: 'إثارة', horror: 'رعب', crime: 'جريمة', adventure: 'مغامرة', scifi: 'خيال علمي', romance: 'رومانسية' } },
+            en: { flag: <Icons.Flags.US />, name: 'English', dir: 'ltr', iso: 'en', channel: 'https://t.me/Noxflix', home: 'Home', search: 'Search', saved: 'Saved', notice: 'If the bot stops, the new link will be posted on our channel', btn: 'Join our channel', all: 'All', movies: 'Movies', tv: 'TV Shows', seeAll: 'See All', watchMovie: 'Watch Movie', watchTV: 'Watch TV Show', seasons: 'Seasons', episodes: 'Episodes', cast: 'Cast', trailer: 'Trailer', details: 'Details', lang: 'Language', season: 'Season', episode: 'Episode', searchPlaceholder: 'Search...', noSaved: 'Nothing saved yet.', servers: 'Streaming Servers', descMovie: 'Movie Description', descTV: 'TV Show Description', fullscreen: 'Fullscreen', loadMore: 'Load More', genres: { action: 'Action', drama: 'Drama', comedy: 'Comedy', thriller: 'Thriller', horror: 'Horror', crime: 'Crime', adventure: 'Adventure', scifi: 'Sci-Fi', romance: 'Romance' } },
+            hi: { flag: <Icons.Flags.IN />, name: 'हिन्दी', dir: 'ltr', iso: 'hi', channel: 'https://t.me/Noxflix_Hindi', home: 'होम', search: 'खोज', saved: 'सहेजा गया', notice: 'यदि बॉट बंद हो जाता है, तो नया लिंक हमारे चैनल पर पोस्ट किया जाएगा', btn: 'हमारे चैनल से जुड़ें', all: 'सभी', movies: 'फ़िल्में', tv: 'टीवी शो', seeAll: 'सभी देखें', watchMovie: 'मूवी देखें', watchTV: 'टीवी शो देखें', seasons: 'सीज़न', episodes: 'एपिसोड', cast: 'कास्ट', trailer: 'ट्रेलर', details: 'विवरण', lang: 'भाषा', season: 'सीज़न', episode: 'एपिसोड', searchPlaceholder: 'खोज...', noSaved: 'कुछ सहेजा नहीं गया.', servers: 'सर्वर', descMovie: 'मूवी विवरण', descTV: 'टीवी शो विवरण', fullscreen: 'पूर्ण स्क्रीन', loadMore: 'और लोड करें', genres: { action: 'एक्शन', drama: 'ड्रामा', comedy: 'कॉमेडी', thriller: 'थ्रिलर', horror: 'हॉरर', crime: 'क्राइम', adventure: 'एडवेंचर', scifi: 'विज्ञान-कथा', romance: 'रोमांस' } },
+            ru: { flag: <Icons.Flags.RU />, name: 'Русский', dir: 'ltr', iso: 'ru', channel: 'https://t.me/Noxflix_Russian', home: 'Главная', search: 'Поиск', saved: 'Сохраненное', notice: 'Если бот остановится, новая ссылка будет опубликована на нашем канале', btn: 'Присоединяйтесь к каналу', all: 'Все', movies: 'Фильмы', tv: 'Сериалы', seeAll: 'Все', watchMovie: 'Смотреть фильм', watchTV: 'Смотреть сериал', seasons: 'Сезоны', episodes: 'Эпизоды', cast: 'В ролях', trailer: 'Трейлер', details: 'Детали', lang: 'Язык', season: 'Сезон', episode: 'Эпизод', searchPlaceholder: 'Поиск...', noSaved: 'Пусто.', servers: 'Серверы', descMovie: 'Описание фильма', descTV: 'Описание сериала', fullscreen: 'Во весь экран', loadMore: 'Загрузить еще', genres: { action: 'Боевик', drama: 'Драма', comedy: 'Комедия', thriller: 'Триллер', horror: 'Ужасы', crime: 'Криминал', adventure: 'Приключения', scifi: 'Фантастика', romance: 'Романтика' } },
+            pt: { flag: <Icons.Flags.PT />, name: 'Português', dir: 'ltr', iso: 'pt', channel: 'https://t.me/Noxflix_Portuguese', home: 'Início', search: 'Buscar', saved: 'Salvos', notice: 'Se o bot parar, o novo link será postado em nosso canal', btn: 'Junte-se ao canal', all: 'Todos', movies: 'Filmes', tv: 'Séries', seeAll: 'Ver Todos', watchMovie: 'Assistir Filme', watchTV: 'Assistir Série', seasons: 'Temporadas', episodes: 'Episódios', cast: 'Elenco', trailer: 'Trailer', details: 'Detalhes', lang: 'Idioma', season: 'Temporada', episode: 'Episódio', searchPlaceholder: 'Buscar...', noSaved: 'Nada salvo.', servers: 'Servidores', descMovie: 'Descrição do filme', descTV: 'Descrição da série', fullscreen: 'Tela Cheia', loadMore: 'Carregar Mais', genres: { action: 'Ação', drama: 'Drama', comedy: 'Comédia', thriller: 'Suspense', horror: 'Terror', crime: 'Crime', adventure: 'Aventura', scifi: 'Ficção Científica', romance: 'Romance' } },
+            id: { flag: <Icons.Flags.ID />, name: 'Indonesia', dir: 'ltr', iso: 'id', channel: 'https://t.me/NoxflixIndonesian', home: 'Beranda', search: 'Cari', saved: 'Tersimpan', notice: 'Jika bot berhenti, tautan baru akan diposting di saluran kami', btn: 'Bergabunglah dengan saluran kami', all: 'Semua', movies: 'Film', tv: 'TV Show', seeAll: 'Lihat Semua', watchMovie: 'Nonton Film', watchTV: 'Nonton TV Show', seasons: 'Musim', episodes: 'Episode', cast: 'Pemeran', trailer: 'Trailer', details: 'Detail', lang: 'Bahasa', season: 'Musim', episode: 'Episode', searchPlaceholder: 'Cari...', noSaved: 'Belum ada.', servers: 'Server', descMovie: 'Deskripsi Film', descTV: 'Deskripsi TV Show', fullscreen: 'Layar Penuh', loadMore: 'Muat Lebih Banyak', genres: { action: 'Aksi', drama: 'Drama', comedy: 'Komedi', thriller: 'Cerita Seru', horror: 'Horor', crime: 'Kejahatan', adventure: 'Petualangan', scifi: 'Fiksi Ilmiah', romance: 'Romantis' } },
+            es: { flag: <Icons.Flags.ES />, name: 'Español', dir: 'ltr', iso: 'es', channel: 'https://t.me/Noxflix_Spanish', home: 'Inicio', search: 'Buscar', saved: 'Guardados', notice: 'Si el bot se detiene, el nuevo enlace se publicará en nuestro canal', btn: 'Únete a nuestro canal', all: 'Todo', movies: 'Películas', tv: 'Series', seeAll: 'Ver Todo', watchMovie: 'Ver Película', watchTV: 'Ver Serie', seasons: 'Temporadas', episodes: 'Episodios', cast: 'Reparto', trailer: 'Tráiler', details: 'Detalles', lang: 'Idioma', season: 'Temporada', episode: 'Episódio', searchPlaceholder: 'Buscar...', noSaved: 'Nada guardado.', servers: 'Servidores', descMovie: 'Descripción de la película', descTV: 'Descripción de la serie', fullscreen: 'Pantalla Completa', loadMore: 'Cargar Más', genres: { action: 'Acción', drama: 'Drama', comedy: 'Comedia', thriller: 'Suspense', horror: 'Terror', crime: 'Crimen', adventure: 'Aventura', scifi: 'Ciencia Ficción', romance: 'Romance' } },
+            fr: { flag: <Icons.Flags.FR />, name: 'Français', dir: 'ltr', iso: 'fr', channel: 'https://t.me/Noxflix_French', home: 'Accueil', search: 'Recherche', saved: 'Enregistré', notice: 'Si le bot s\'arrête, le nouveau lien sera publié sur notre chaîne', btn: 'Rejoignez notre chaîne', all: 'Tout', movies: 'Films', tv: 'Séries', seeAll: 'Voir Tout', watchMovie: 'Voir le film', watchTV: 'Voir la série', seasons: 'Saisons', episodes: 'Épisodes', cast: 'Casting', trailer: 'Bande-annonce', details: 'Détails', lang: 'Langue', season: 'Saison', episode: 'Épisode', searchPlaceholder: 'Rechercher...', noSaved: 'Rien d\'enregistré.', servers: 'Serveurs', descMovie: 'Description du film', descTV: 'Description de la série', fullscreen: 'Plein Écran', loadMore: 'Charger Plus', genres: { action: 'Action', drama: 'Drame', comedy: 'Comédie', thriller: 'Thriller', horror: 'Horreur', crime: 'Crime', adventure: 'Aventure', scifi: 'Science-Fiction', romance: 'Romance' } },
+            de: { flag: <Icons.Flags.DE />, name: 'Deutsch', dir: 'ltr', iso: 'de', channel: 'https://t.me/Noxflix_German', home: 'Start', search: 'Suche', saved: 'Gespeichert', notice: 'Wenn der Bot stoppt, wird der neue Link auf unserem Kanal veröffentlicht', btn: 'Tritt unserem Kanal bei', all: 'Alle', movies: 'Filme', tv: 'Serien', seeAll: 'Alle ansehen', watchMovie: 'Film ansehen', watchTV: 'Serie ansehen', seasons: 'Staffeln', episodes: 'Episoden', cast: 'Besetzung', trailer: 'Trailer', details: 'Details', lang: 'Sprache', season: 'Staffel', episode: 'Episode', searchPlaceholder: 'Suchen...', noSaved: 'Nichts gespeichert.', servers: 'Server', descMovie: 'Filmbeschreibung', descTV: 'Serienbeschreibung', fullscreen: 'Vollbild', loadMore: 'Mehr Laden', genres: { action: 'Action', drama: 'Drama', comedy: 'Komödie', thriller: 'Thriller', horror: 'Horror', crime: 'Krimi', adventure: 'Abenteuer', scifi: 'Sci-Fi', romance: 'Romantik' } }
         };
 
         const SERVERS = [
@@ -341,7 +342,7 @@
                 return (
                     <div>
                         <div className="px-4 flex justify-between items-baseline mb-3">
-                            <h2 className="text-lg font-bold text-gray-100 tracking-wide">{section.name}</h2>
+                            <h2 className="text-lg font-bold text-gray-100 tracking-wide">{t.genres[section.id]}</h2>
                             <button onClick={() => navigate('seeAll', {section, filter})} className="text-[#E50914] text-xs font-bold uppercase tracking-wider hover:text-white transition-colors">
                                 {t.seeAll}
                             </button>
@@ -393,6 +394,24 @@
                 const isSaved = watchlist.some(w => w.id === data.id);
                 const imdbId = data.external_ids?.imdb_id;
 
+                const openPlayerWithAd = () => {
+                    if(!imdbId) {
+                        alert('IMDB ID not available.');
+                        return;
+                    }
+                    
+                    const proceed = () => navigate('player', { id, type, imdbId, title, seasons: data.number_of_seasons });
+                    
+                    if (window.Adsgram) {
+                        const ad = window.Adsgram.init({ blockId: "int-36626" });
+                        ad.show()
+                          .then(() => proceed())
+                          .catch(() => proceed());
+                    } else {
+                        proceed();
+                    }
+                };
+
                 return (
                     <div className="pb-24 min-h-screen solid-bg relative">
                         <div className="w-full aspect-video md:aspect-[21/9] relative">
@@ -425,10 +444,7 @@
                             </div>
 
                             <div className="flex gap-3 mb-6">
-                                <button onClick={() => {
-                                    if(imdbId) navigate('player', { id, type, imdbId, title, seasons: data.number_of_seasons });
-                                    else alert('IMDB ID not available.');
-                                }} className="flex-1 primary-red-bg text-white font-bold py-3.5 rounded-lg flex justify-center items-center gap-2 uppercase tracking-wide">
+                                <button onClick={openPlayerWithAd} className="flex-1 primary-red-bg text-white font-bold py-3.5 rounded-lg flex justify-center items-center gap-2 uppercase tracking-wide">
                                     <Icons.Play /> {type === 'movie' ? t.watchMovie : t.watchTV}
                                 </button>
                                 <button onClick={() => toggleSave(data, type)} className={`w-14 flex justify-center items-center rounded-lg border-2 transition-colors ${isSaved ? 'bg-white border-white text-black' : 'solid-panel border-[#333] text-white hover:border-gray-500'}`}>
@@ -503,12 +519,11 @@
                     if (hideControlsTimeout.current) clearTimeout(hideControlsTimeout.current);
                     hideControlsTimeout.current = setTimeout(() => {
                         setControlsVisible(false);
-                    }, 3500); // إخفاء الزر بعد 3.5 ثواني
+                    }, 3500); 
                 };
 
                 useEffect(() => {
                     if (isFullscreen) {
-                        // إخفاء الزر مباشرة عند الدخول في وضع التكبير لتطبيق الحركة
                         setControlsVisible(false);
                         if (hideControlsTimeout.current) clearTimeout(hideControlsTimeout.current);
                     }
@@ -605,7 +620,6 @@
                             </div>
 
                             <div ref={playerContainerRef} className={containerClass} onMouseMove={isFullscreen ? resetControlsTimeout : undefined}>
-                                {/* تم إزالة sandbox لأن السيرفرات ترفض العمل وتظهر شاشة سوداء عند حظر نوافذها المنبثقة برمجياً */}
                                 <iframe 
                                     src={embedUrl} 
                                     className="w-full h-full border-0 absolute inset-0" 
@@ -613,7 +627,6 @@
                                     allowFullScreen>
                                 </iframe>
                                 
-                                {/* الطبقة الشفافة الذكية: تمنع اللمسة الأولى لالتقاطها وإظهار الأزرار ثم تختفي برمجياً لتمرير اللمسات للمشغل */}
                                 {isFullscreen && (
                                     <div 
                                         className={`touch-overlay ${controlsVisible ? 'inactive' : 'active'}`}
@@ -622,7 +635,6 @@
                                     ></div>
                                 )}
 
-                                {/* زر X يختفي ويظهر بناءً على اللمس */}
                                 {isFullscreen && (
                                     <button 
                                         onClick={(e) => { e.stopPropagation(); toggleFullscreen(); }} 
@@ -635,7 +647,6 @@
                             {type === 'tv' && (
                                 <div className="mt-6 flex gap-4 w-full">
                                     <div className="flex-1 relative cursor-pointer">
-                                        {/* تم إزالة select واستبداله بفتح القائمة المنبثقة مباشرة */}
                                         <button onClick={() => setShowSeasonModal(true)} className="w-full bg-[#141414] border border-[#333] hover:border-[#E50914] text-white px-4 py-3 rounded-xl font-bold flex justify-between items-center transition-all shadow-md">
                                             <span className="text-sm truncate">{t.season} {s}</span>
                                             <Icons.ChevronDown />
@@ -651,7 +662,6 @@
                                 </div>
                             )}
                             
-                            {/* نافذة المواسم (Native Bottom Sheet) */}
                             {showSeasonModal && (
                                 <div className="fixed inset-0 bg-black/80 z-[100] flex justify-center items-end" onClick={() => setShowSeasonModal(false)}>
                                     <div className="solid-panel w-full sm:max-w-md rounded-t-3xl border-t border-[#333] shadow-[0_-10px_40px_rgba(0,0,0,0.8)] flex flex-col max-h-[75vh] animate-slide-up" onClick={e => e.stopPropagation()}>
@@ -676,7 +686,6 @@
                                 </div>
                             )}
 
-                            {/* نافذة الحلقات (Native Bottom Sheet) */}
                             {showEpisodeModal && (
                                 <div className="fixed inset-0 bg-black/80 z-[100] flex justify-center items-end" onClick={() => setShowEpisodeModal(false)}>
                                     <div className="solid-panel w-full sm:max-w-md rounded-t-3xl border-t border-[#333] shadow-[0_-10px_40px_rgba(0,0,0,0.8)] flex flex-col max-h-[75vh] animate-slide-up" onClick={e => e.stopPropagation()}>
@@ -799,7 +808,7 @@
                             <button onClick={() => navigate('home')} className="p-2 bg-[#141414] rounded-full text-white border border-[#333]">
                                 <Icons.Back rtl={isRTL} />
                             </button>
-                            <h2 className="text-xl font-black uppercase text-white">{section.name}</h2>
+                            <h2 className="text-xl font-black uppercase text-white">{t.genres[section.id]}</h2>
                         </div>
                         <div className="px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                             {items.map((item, idx) => (
